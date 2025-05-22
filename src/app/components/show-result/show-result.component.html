@@ -1,0 +1,30 @@
+<div class="container my-5" style="font-family: 'Poppins', sans-serif;">
+
+  <!-- Title -->
+  <div class="text-center mb-5">
+    <h1 class="text-accent fw-bold">Your Exam Result</h1>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card bg-dark text-white p-4 shadow">
+        <h5 class="text-accent">Score</h5>
+        <p class="fs-2">{{ resultSummary.score }} / {{ resultSummary.total }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-dark text-white p-4 shadow">
+        <h5 class="text-accent">Correct Answers</h5>
+        <p class="fs-2">{{ resultSummary.score }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-dark text-white p-4 shadow">
+        <h5 class="text-accent">Wrong Answers</h5>
+        <p class="fs-2">{{ resultSummary.total - resultSummary.score }}</p>
+      </div>
+    </div>
+  </div>
+
+ 

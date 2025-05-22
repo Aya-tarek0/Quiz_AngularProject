@@ -1,0 +1,43 @@
+<div class="container my-5">
+  <div class="dashboard-card p-5 rounded-4 shadow text-white">
+    <h2 class="mb-4 fw-bold text-center">Take Exam</h2>
+
+    <form (ngSubmit)="submitExam()">
+      @for (q of questions; let i = $index; track i) {
+      <div class="mb-4 p-4 rounded-4 shadow-sm bg-dark text-white">
+        <p class="fw-bold mb-3 px-3 py-2 rounded-3" style="background-color: #e0f0ff; color: #1a1a1a;">
+          Q{{ i + 1 }}. {{ q.text }}
+        </p>
+
+        <div class="row">
+          @for (opt of ['A', 'B', 'C', 'D']; let j = $index; track j) {
+          <div class="col-md-6 mb-2">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                [id]="'q' + q.id + opt"
+                [name]="'question-' + q.id"
+                [value]="opt"
+                [(ngModel)]="answers[q.id]"
+                required
+              />
+              <label class="form-check-label ms-2" [for]="'q' + q.id + opt">
+                {{ q['option' + opt] }}
+              </label>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      }
+
+      <button
+        class="btn w-100 mt-4 text-white"
+        style="background: linear-gradient(90deg, #4e54c8, #8f94fb); border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
+      >
+        <i class="bi bi-send me-2"></i> Submit Exam
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+.dashboard-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-card h2 {
+  color: #0ea5e9;
+}
+
+.dashboard-btn {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-accent {
+  background-color: #0ea5e9;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #0284c7;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+}
+
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+.text-accent {
+  color: #0ea5e9 !important;
+}
+
+.btn-accent {
+  background-color: #0ea5e9;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+}
+
+input.form-control,
+textarea.form-control {
+  background-color: #334155 !important;
+  color: #fff !important;
+  border-radius: 0.5rem;
+}

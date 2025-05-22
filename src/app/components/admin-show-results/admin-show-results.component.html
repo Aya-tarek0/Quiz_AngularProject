@@ -1,0 +1,32 @@
+<div class="container my-5" style="font-family: 'Poppins', sans-serif;">
+  <h2 class="text-accent text-center mb-4">Exam Results Overview</h2>
+
+  <div class="card bg-dark text-white p-4 shadow">
+    <div class="table-responsive">
+      <table class="table table-dark table-striped align-middle mb-0">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Exam Title</th>
+            <th>Submitted At</th>
+            <th class="text-center">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (res of results; track $index) {
+          <tr *ngFor="let res of results">
+            <td>{{ res.userName }}</td>
+            <td>{{ res.title }}</td>
+            <td>{{ res.submitAt | date:'medium' }}</td>
+            <td class="text-center">
+              <span class="badge" [ngClass]="res.score >= (res.score? (results.length>0? results[0].score:0):0) ? 'bg-success':'bg-warning'">
+                {{ res.score }}
+              </span>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

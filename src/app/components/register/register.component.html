@@ -1,0 +1,70 @@
+<div class="register-page d-flex justify-content-center align-items-center vh-100">
+  <div class="register-card p-4 shadow rounded-4">
+    <h2 class="text-white mb-4 text-center">Create a New Account</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label text-white">Username</label>
+              <input type="text" placeholder="Name" class="form-control custom-input" formControlName="userName" [ngClass]=" {'is-valid ' : !getname.errors && getname.touched, 'is-invalid' : getname.errors && getname.touched}">
+      </div>
+  @if(getname.errors && getname.touched || getname.dirty)
+            {
+              @if(getname.hasError('required'))
+              {
+                <p class="text-danger">User Name Is Required</p>
+              }
+            }
+
+      <div class="mb-3">
+        <label class="form-label text-white">Email</label>
+  <input type="email" placeholder="Email" class="form-control custom-input" formControlName="email" [ngClass]=" {'is-valid ' : !getEmail.errors && getEmail.touched, 'is-invalid' : getEmail.errors && getEmail.touched}">
+      </div>
+@if(getEmail.errors && getEmail.touched || getEmail.dirty)
+{
+  @if(getEmail.hasError('required'))
+  {
+    <p class="text-danger">Email is required</p>
+  }
+  @if(getEmail.hasError('email'))
+  {
+    <p class="text-danger">Email format is invalid</p>
+  }
+}
+      <div class="mb-3">
+        <label class="form-label text-white">Password</label>
+  <input type="password" placeholder="Password" class="form-control custom-input" formControlName="password" [ngClass]=" {'is-valid ' : !getPassword.errors && getPassword.touched, 'is-invalid' : getPassword.errors && getPassword.touched}">
+      </div>
+      @if(getPassword.errors && getPassword.touched || getPassword.dirty)
+{
+  @if(getPassword.hasError('required'))
+  {
+    <p class="text-danger">Password is required</p>
+  }
+  @if(getPassword.hasError('minlength'))
+  {
+    <p class="text-danger">Password must be at least 6 characters</p>
+  }
+  @if(getPassword.hasError('pattern'))
+  {
+    <p class="text-danger">Password must contain uppercase, lowercase and a number</p>
+  }
+}
+
+
+      <button type="submit" class="btn btn-accent w-100 py-2 mt-2">Register</button>
+       @if (successMessage) {
+              <div class="mt-3 text-success">{{ successMessage }}</div>
+            }
+
+            @if (errorMessage) {
+              <div class="mt-2 text-danger">{{ errorMessage }}</div>
+            }
+    </form>
+
+    <p class="text-white text-center mt-3 mb-0">
+      Already have an account?
+      <a routerLink="/login" class="text-accent text-decoration-none">Login</a>
+    </p>
+
+  </div>
+</div>

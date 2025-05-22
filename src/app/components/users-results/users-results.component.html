@@ -1,0 +1,17 @@
+<div class="exam-selector-container" style="font-family: 'Poppins', sans-serif; max-width: 400px; margin: 2rem auto;">
+  <label for="examSelect" class="form-label text-accent mb-2">Choose an Exam</label>
+  <select
+    id="examSelect"
+    class="form-select bg-dark text-white"
+    [ngModel]="selectedExamId"
+    (ngModelChange)="onSelect($event)"
+  >
+    <option [ngValue]="undefined" disabled selected>-- Select Exam --</option>
+    @for (ex of exams; track $index) {
+    <option *ngFor="let ex of exams" [ngValue]="ex.id">
+      {{ ex.title }}
+    </option>
+  }
+
+  </select>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h3>Edit Question</h3>
+
+  <form [formGroup]="questionForm" (ngSubmit)="updateQuestion()">
+    <div class="mb-3">
+      <label class="form-label">Question Text</label>
+      <input type="text" class="form-control" formControlName="text">
+    </div>
+   @for (opt of ['A', 'B', 'C', 'D']; track $index) {
+    <div class="mb-3" >
+      <label class="form-label">Option {{ opt }}</label>
+      <input type="text" class="form-control" [formControlName]="'option' + opt">
+    </div>
+  }
+    <div class="mb-3">
+      <label class="form-label">Correct Answer</label>
+      <select class="form-select" formControlName="correctAnswer">
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+        <option value="C">Option C</option>
+        <option value="D">Option D</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!questionForm.valid">Save</button>
+  </form>
+@if(success){
+  <p class="text-success mt-2" >{{ success }}</p>
+}
+@if(error){
+  <p class="text-danger mt-2" >{{ error }}</p>
+}
+</div>

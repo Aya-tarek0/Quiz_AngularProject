@@ -1,0 +1,37 @@
+<div class="exam-container text-white" style="font-family: 'Poppins', sans-serif;">
+  <div class="exam-meta mb-5">
+    <h2 class="exam-title mb-2">{{ exam.title }}</h2>
+    <p><strong>Description:</strong> {{ exam.description }}</p>
+    <p><strong>Date:</strong> {{ exam.createdAt | date:'short' }}</p>
+  </div>
+
+  @for (question of exam.questions; track $index) {
+    <div class="question-card p-4 mb-4 rounded shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="question-text mb-0"><strong>Q{{ $index + 1 }}:</strong> {{ question.text }}</p>
+        <div>
+          <button class="btn btn-outline-info btn-sm me-2" (click)="editQuestion(question.id)">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteQuestion(question.id)">
+            <i class="bi bi-trash"></i> Delete
+          </button>
+        </div>
+      </div>
+
+      <ul class="list-unstyled ms-3">
+        @for (option of ['A', 'B', 'C', 'D']; track $index) {
+          <li class="py-1">
+            <span [class.text-success]="question['correctAnswer'] === question['option' + option]">
+              - {{ question['option' + option] }}
+            </span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+
+  <button class="btn btn-accent mt-4" (click)="addQuestion(exam.id)">
+    <i class="bi bi-plus-circle-fill"></i> Add New Question
+  </button>
+</div>

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #0f172a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-page {
+  background-color: #0f172a;
+}
+
+.login-card {
+  background-color: #1e293b;
+  width: 100%;
+  max-width: 400px;
+}
+
+.custom-input {
+  background-color: #334155;
+  border: 1px solid #475569;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.custom-input::placeholder {
+  color: #94a3b8;
+}
+
+.custom-input:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 0.2rem rgba(14, 165, 233, 0.25);
+  background-color: #334155;
+  color: #fff;
+}
+
+.btn-accent {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+  border-radius: 999px;
+}
+
+.btn-accent:hover {
+  background-color: #0284c7;
+}
+
+.text-accent {
+  color: #0ea5e9 !important;
+}

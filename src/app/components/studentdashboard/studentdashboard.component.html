@@ -1,0 +1,15 @@
+<div class="container my-5">
+  <div class="dashboard-card p-5 rounded-4 shadow text-center">
+    <h2 class="mb-4 fw-bold text-white">Student Dashboard</h2>
+
+    <div class="d-flex flex-column gap-4 align-items-center">
+      <a routerLink="/AllExams" class="btn btn-outline-light dashboard-btn w-75">
+        <i class="bi bi-clipboard-check me-2"></i> View Available Exams
+      </a>
+
+      <a  class="btn btn-accent text-white dashboard-btn w-75" (click)="toResults()">
+        <i class="bi bi-bar-chart-line me-2"></i> View My Results
+      </a>
+    </div>
+  </div>
+</div>

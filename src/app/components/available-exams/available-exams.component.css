@@ -1,0 +1,21 @@
+.soft-dark-bg {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+}
+
+.input-dark {
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn-soft-accent {
+  background-color: #5c7cfa;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-soft-accent:hover {
+  background-color: #748ffc;
+}

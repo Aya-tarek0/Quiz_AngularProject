@@ -1,0 +1,26 @@
+.dashboard-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.1);
+}
+
+.dashboard-btn {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.btn-accent {
+  background-color: #00bcd4;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #0097a7;
+}

@@ -1,0 +1,17 @@
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+.text-accent {
+  color: #0ea5e9 !important;
+}
+
+.bg-accent {
+  background-color: #0ea5e9 !important;
+}
+
+.badge {
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+}
