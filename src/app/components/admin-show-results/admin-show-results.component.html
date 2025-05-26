@@ -14,7 +14,7 @@
         </thead>
         <tbody>
           @for (res of results; track $index) {
-          <tr *ngFor="let res of results">
+          <tr>
             <td>{{ res.userName }}</td>
             <td>{{ res.title }}</td>
             <td>{{ res.submitAt | date:'medium' }}</td>

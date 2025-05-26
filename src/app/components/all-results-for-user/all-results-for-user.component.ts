@@ -10,18 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './all-results-for-user.component.css'
 })
 export class AllResultsForUserComponent implements OnInit{
-id:string = '';
-  results: { userName: string; title: string; submitAt: string; score: number }[] = [];
+Id:string = '';
+  results: {userName: string; title: string; submitAt: string; score: number }[] = [];
 
   constructor(private resultSer :ResultService , private route : ActivatedRoute){
-        this.id = String(this.route.snapshot.paramMap.get('id'));
+        this.Id = String(this.route.snapshot.paramMap.get('id'));
 
 
   }
 
   ngOnInit(){
- this.resultSer.getResultByUserId(this.id).subscribe((data) => {
+    this.results = [];
+ this.resultSer.getResultByUserId(this.Id).subscribe((data) => {
       console.log("Exam data:", data);
+
             this.results = data;
 
 

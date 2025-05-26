@@ -7,10 +7,10 @@
     (ngModelChange)="onSelect($event)"
   >
     <option [ngValue]="undefined" disabled selected>-- Select Exam --</option>
-    @for (ex of exams; track $index) {
-    <option *ngFor="let ex of exams" [ngValue]="ex.id">
-      {{ ex.title }}
-    </option>
+    @for (ex of exams; track ex.id) {
+    <option [ngValue]="ex.id">
+        {{ ex.title }}
+      </option>
   }
 
   </select>
