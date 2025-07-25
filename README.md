@@ -1,59 +1,47 @@
-# QuizAngular
+# 📝 Exam Management System – Frontend (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+This is the **Frontend** for the Exam Management System built using **Angular**.  
+It connects to a .NET Web API backend and provides a responsive and role-based interface for both teachers and students.
 
-## Development server
+🔗 **Backend Repository:**  
+[➡️ Click here to view the ASP.NET Web API Backend](https://github.com/Aya-tarek0/ExamSystem)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🎯 Key Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Student View**
+  - Take assigned exams with multiple questions
+  - View final score automatically after submission
 
-## Code scaffolding
+- **Teacher View (Admin)**
+  - Create exams and add/edit/delete questions
+  - Choose the correct answer for each question
+  - View list of students and their results
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Shared Functionality**
+  - Full CRUD for exams and questions
+  - Role-based redirection (Student / Teacher)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🔐 Authentication & Authorization
 
-```bash
-ng generate --help
-```
+- JWT-based login
+- Two roles:
+  - **Admin**: for teachers
+  - **Student**
+- Angular Guards for secure route protection and redirection
+- Token storage and handling via `localStorage`
 
-## Building
+---
 
-To build the project run:
+## 🧰 Technologies Used
 
-```bash
-ng build
-```
+- **Angular 18**
+- **Angular Router**
+- **Angular Guards**
+- **Bootstrap**
+- **JWT handling**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
